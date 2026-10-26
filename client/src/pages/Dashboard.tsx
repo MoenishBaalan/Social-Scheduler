@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ActivityIcon, CheckCircleIcon, ClockIcon, SendIcon, Share2Icon, TrendingUpIcon } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import api from '../api/axios'
 
 const Dashboard = () => {
 
-    const [stats, setStats] = useState({ scheduled: 0, published: 0, connectedAccounts: 0 })
+    const [stats, setStats] = useState({ scheduled: 0, published: 0, connectedAccounts: 0 })  
     const [activities, setActivities] = useState<any[]>([])
 
     useEffect(() => {
